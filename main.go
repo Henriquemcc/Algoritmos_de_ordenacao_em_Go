@@ -3,8 +3,9 @@ package main
 import (
 	"fmt"
 	"time"
-	"trabalho/fronteira"
-	"trabalho/ordenacao"
+
+	"./fronteira"
+	"./ordenacao"
 )
 
 func main() {
