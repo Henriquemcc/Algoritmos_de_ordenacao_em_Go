@@ -1,6 +1,6 @@
 package ordenacao
 
-// Algoritmo de ordenacao
+// BubbleSort executa o algoritmo de ordenacao bolha no arranjo de numeros.
 func BubbleSort() {
 	for i = (n - 1); i > 0; i-- {
 		for j = 0; j < i; j++ {

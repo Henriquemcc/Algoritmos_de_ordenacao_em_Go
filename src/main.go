@@ -8,9 +8,11 @@ import (
 	"./ordenacao"
 )
 
+// main inicia o programa.
 func main() {
 
-	for {
+	var repetir = true
+	for repetir {
 		var algoritmo = obterAlgoritmo()
 
 		if algoritmo != 0 {
@@ -18,21 +20,25 @@ func main() {
 			var ordem = obterOrdemArranjo()
 			executarOrdenacao(ordem, algoritmo)
 		} else {
-			break
+			repetir = false
 		}
 
 	}
 
 }
 
+// obterTamanhoArranjo obtem do usuario o tamanho do arranjo que sera ordenado.
+// Retorna um numero inteiro contendo o tamanho do arranjo.
 func obterTamanhoArranjo() int {
 	fmt.Println("Qual o tamanho do arranjo?")
 	return int(fronteira.ReadInt64())
 
 }
 
-func obterAlgoritmo() uint64 {
-	var algoritmo uint64
+// obterAlgoritmo obtem do usuario o algoritmo de ordenacao que deseja executar.
+// Retorna um numero inteiro unsigned de 64 bits contendo o numero do algoritmo de ordenacao.
+func obterAlgoritmo() uint8 {
+	var algoritmo uint8
 
 	for {
 		fmt.Println("Qual algoritmo de ordenação deseja executar?")
@@ -45,7 +51,7 @@ func obterAlgoritmo() uint64 {
 		fmt.Println("6 - Selection Sort")
 		fmt.Println("7 - Shell Sort")
 
-		algoritmo = fronteira.ReadUint64()
+		algoritmo = fronteira.ReadUint8()
 
 		if algoritmo <= 7 {
 			break
@@ -55,15 +61,17 @@ func obterAlgoritmo() uint64 {
 	return algoritmo
 }
 
-func obterOrdemArranjo() uint64 {
-	var ordem uint64
+// obterOrdemArranjo obtem do usuario a ordem do arranjo que sera ordenado.
+// Retorna um numero inteiro unsigned de 64 bits contendo o numero da ordem do arranjo que sera ordenado.
+func obterOrdemArranjo() uint8 {
+	var ordem uint8
 
 	for {
 		fmt.Println("Como deseja que o arranjo de numeros esteja?")
 		fmt.Println("0 - Aleatorio")
 		fmt.Println("1 - Decrescente")
 
-		ordem = fronteira.ReadUint64()
+		ordem = fronteira.ReadUint8()
 
 		if ordem <= 1 {
 			break
@@ -73,7 +81,10 @@ func obterOrdemArranjo() uint64 {
 	return ordem
 }
 
-func executarOrdenacao(ordem uint64, algoritmo uint64) {
+// executarOrdenacao executa a ordenacao do arranjo de caracteres.
+// Parametro ordem: Numero indicando a ordem que o arranjo estara antes de ser ordenado.
+// Parametro algoritmo: Numero indicando o algoritmo de ordenacao de sera utilizado.
+func executarOrdenacao(ordem uint8, algoritmo uint8) {
 
 	//Ordenando o arranjo de acordo com a ordem selecionada
 	if ordem == 0 {
@@ -82,7 +93,9 @@ func executarOrdenacao(ordem uint64, algoritmo uint64) {
 		ordenacao.Decrescente()
 	}
 
+	fmt.Println("Arranjo de inteiros antes de ordenar:")
 	ordenacao.Mostrar()
+	fmt.Println("")
 
 	var tempoGasto time.Duration
 
@@ -145,7 +158,9 @@ func executarOrdenacao(ordem uint64, algoritmo uint64) {
 
 	}
 
+	fmt.Println("Arranjo de inteiros depois de ordenar:")
 	ordenacao.Mostrar()
+	fmt.Println("")
 	fmt.Println("Está ordenado:", ordenacao.IsOrdenado())
 	fmt.Println("Tempo gasto na ordenação:", tempoGasto.String())
 }

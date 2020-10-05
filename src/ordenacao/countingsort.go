@@ -1,6 +1,6 @@
-//Retorna o maior elemento do arranjo.
 package ordenacao
 
+// getMaior obtem o maior elemento do arranjo de numeros inteiros.
 func getMaior() int {
 	maior := array[0]
 
@@ -12,7 +12,7 @@ func getMaior() int {
 	return maior
 }
 
-// Algoritmo de ordenacao
+// CountingSort executa o algoritmo de ordenacao counting sort no arranjo de numeros inteiros.
 func CountingSort() {
 
 	//Array para contar o numero de ocorrencias de cada elemento

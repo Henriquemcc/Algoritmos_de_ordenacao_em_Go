@@ -1,6 +1,6 @@
 package ordenacao
 
-// Algoritmo de ordenacao
+// InsertionSort executa o algoritmo de ordenacao insertion sort.
 func InsertionSort() {
 	for i := 1; i < n; i++ {
 		tmp := array[i]

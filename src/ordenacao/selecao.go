@@ -1,6 +1,6 @@
 package ordenacao
 
-// Algoritmo de ordenacao
+// SelectionSort executa o algoritmo de ordenacao selection sort.
 func SelectionSort() {
 	for i = 0; i < (n - 1); i++ {
 		indice := i

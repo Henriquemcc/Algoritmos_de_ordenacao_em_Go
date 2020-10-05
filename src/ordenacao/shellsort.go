@@ -1,5 +1,8 @@
 package ordenacao
 
+// insercaoPorCor insere elementos do arranjo de acordo com a cor da parte do arranjo.
+// Parametro cor: Numero inteiro indicando a cor da parte do arranjo.
+// Parametro h: Quantidade de partes do arranjo.
 func insercaoPorCor(cor int, h int) {
 	for i := (h + cor); i < n; i += h {
 		tmp := array[i]
@@ -12,7 +15,7 @@ func insercaoPorCor(cor int, h int) {
 	}
 }
 
-// Algoritmo de ordenacao
+// ShellSort executa o algoritmo de ordenacao shellsort.
 func ShellSort() {
 	h := 1
 

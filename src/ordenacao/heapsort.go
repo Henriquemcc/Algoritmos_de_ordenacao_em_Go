@@ -1,11 +1,15 @@
 package ordenacao
 
+// constroi constroi o heap do heapsort.
+// Parametro tamHeap: Numero inteiro indicando o tamanho do heap a ser construido.
 func constroi(tamHeap int) {
 	for i := tamHeap; i > 1 && array[i] > array[i/2]; i /= 2 {
 		swap(i, i/2)
 	}
 }
 
+// reconstroi reconstroi o heap do heapsort.
+// Parametro tamHeap: Numero inteiro indicando o tamanho do heap a ser reconstruido.
 func reconstroi(tamHeap int) {
 	i := 1
 	var filho int
@@ -26,7 +30,7 @@ func reconstroi(tamHeap int) {
 	}
 }
 
-// Algoritmo de ordenacao
+// HeapSort executa o algoritmo de ordenacao heapsort.
 func HeapSort() {
 	//Alterar o vetor ignorando a posicao zero
 	for i := n; i > 0; i-- {
