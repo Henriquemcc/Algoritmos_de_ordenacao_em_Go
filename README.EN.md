@@ -1,6 +1,7 @@
 [Versão em Português](README.md)
 
 # Sorting algorithms in Go
+[![deepcode](https://www.deepcode.ai/api/gh/badge?key=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwbGF0Zm9ybTEiOiJnaCIsIm93bmVyMSI6IkhlbnJpcXVlbWNjIiwicmVwbzEiOiJBbGdvcml0bW9zX2RlX29yZGVuYWNhb19lbV9HbyIsImluY2x1ZGVMaW50IjpmYWxzZSwiYXV0aG9ySWQiOjIzNTQyLCJpYXQiOjE2MDIxMDI0ODJ9.ia181u1O0KzgAA9gIHzyuZRRxgmRU67wb3Fe_Tr-B7c)](https://www.deepcode.ai/app/gh/Henriquemcc/Algoritmos_de_ordenacao_em_Go/_/dashboard?utm_content=gh%2FHenriquemcc%2FAlgoritmos_de_ordenacao_em_Go)
 
 This repository contains the ordering algorithms studied in Algorithms and Data Structures II and translated into the Go language, aiming to be used as an example of code in Go in the presentation of the language work in the subject Programming Languages of the Computer Science course at Pontifical Catholic University of Minas Gerais.
 
